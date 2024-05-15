@@ -33,7 +33,13 @@ Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, 
 	// Assigns the image to the OpenGL Texture object
 	glTexImage2D(texType, 0, GL_RGBA, widthImg, heightImg, 0, format, pixelType, bytes);
 	// Generates MipMaps
-	glGenerateMipmap(texType);
+
+
+	if (type != NULL) {
+		printf("%d", texType);
+		glGenerateMipmap(texType);
+	}
+
 
 	// Deletes the image data as it is already in the OpenGL Texture object
 	stbi_image_free(bytes);

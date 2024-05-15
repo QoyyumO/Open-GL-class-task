@@ -1,5 +1,3 @@
-
-
 #include<iostream>
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
@@ -101,8 +99,9 @@ int main()
 
 
 	//Texture
-	Texture brickTex("brick.jpeg", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	Texture brickTex("text.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	brickTex.texUnit(shaderProgram, "tex0", 0);
+
 
 
 
